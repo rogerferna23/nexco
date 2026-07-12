@@ -2,7 +2,7 @@
    NEXCO — Typography tokens
    Display: Poppins (600/700) — big headlines, negative tracking.
    Body: Inter (400/500) — calm, legible, editorial.
-   Eyebrows: uppercase, wide tracking, gold. Marked hierarchy.
+   Escala compacta (v2): tamaños reducidos para una web más densa.
    ============================================================ */
 :root {
   /* --- Families --- */
@@ -15,24 +15,24 @@
   --weight-semibold: 600;
   --weight-bold:     700;
 
-  /* --- Fluid type scale (min → max via clamp) --- */
-  --text-display: clamp(2.75rem, 6vw, 5rem);      /* hero headline */
-  --text-h1:      clamp(2.25rem, 4.6vw, 3.5rem);
-  --text-h2:      clamp(1.75rem, 3.4vw, 2.5rem);
-  --text-h3:      clamp(1.375rem, 2vw, 1.75rem);
-  --text-h4:      1.25rem;
-  --text-lg:      1.125rem;
-  --text-body:    1.0625rem;   /* 17px */
-  --text-sm:      0.9375rem;   /* 15px */
-  --text-xs:      0.8125rem;   /* 13px */
-  --text-eyebrow: 0.78rem;     /* uppercase label */
+  /* --- Fluid type scale (min → max via clamp) — compacto --- */
+  --text-display: clamp(2.15rem, 4.8vw, 3.85rem);   /* hero headline */
+  --text-h1:      clamp(1.75rem, 3.6vw, 2.65rem);
+  --text-h2:      clamp(1.4rem, 2.7vw, 1.95rem);
+  --text-h3:      clamp(1.15rem, 1.7vw, 1.4rem);
+  --text-h4:      1.05rem;
+  --text-lg:      1rem;
+  --text-body:    0.94rem;    /* ~15px */
+  --text-sm:      0.84rem;    /* ~13.5px */
+  --text-xs:      0.75rem;    /* 12px */
+  --text-eyebrow: 0.72rem;    /* uppercase label */
 
   /* --- Line heights --- */
-  --leading-display: 1.02;
-  --leading-tight:   1.1;
+  --leading-display: 1.03;
+  --leading-tight:   1.12;
   --leading-snug:    1.28;
-  --leading-normal:  1.62;
-  --leading-relaxed: 1.75;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.72;
 
   /* --- Letter spacing --- */
   --tracking-display: -0.03em;   /* big Poppins headlines */

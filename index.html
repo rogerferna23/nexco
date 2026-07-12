@@ -31,6 +31,15 @@
   </style>
 </head>
 <body>
+  <!-- Fondo dinámico: auroras doradas + malla de hexágonos -->
+  <div class="bg-fx" aria-hidden="true">
+    <span class="bg-fx__blob bg-fx__blob--1"></span>
+    <span class="bg-fx__blob bg-fx__blob--2"></span>
+    <span class="bg-fx__blob bg-fx__blob--3"></span>
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__veil"></div>
+  </div>
+
   <div class="s-progress" id="progress"></div>
 
   <!-- ===================== NAV ===================== -->
@@ -71,7 +80,7 @@
             Redes sociales, comunidad y transformación de marca para emprendedores latinos en Estados Unidos.
           </p>
           <div class="s-hero__ctas" data-reveal style="transition-delay:180ms">
-            <a class="nx-btn nx-btn--primary nx-btn--lg" href="#contacto">Empecemos<span class="nx-btn__icon" aria-hidden="true"><span class="nx-ic" style="width:18px;height:18px"><i data-lucide="arrow-right"></i></span></span></a>
+            <a class="nx-btn nx-btn--primary nx-btn--lg" href="#contacto">Empecemos<span class="nx-btn__icon" aria-hidden="true"><span class="nx-ic" style="width:16px;height:16px"><i data-lucide="arrow-right"></i></span></span></a>
             <a class="nx-btn nx-btn--secondary nx-btn--lg" href="#servicios">Ver servicios</a>
           </div>
           <div class="s-hero__meta" data-reveal style="transition-delay:240ms">
@@ -82,7 +91,7 @@
           </div>
         </div>
         <div class="s-hero__hc" data-reveal>
-          <svg class="nx-hc" width="440" height="410.1" viewBox="-242.5 -226.0 485.0 452.0" role="img" aria-label="Colmena Nexco" style="height:auto">
+          <svg class="nx-hc" width="360" height="335.5" viewBox="-242.5 -226.0 485.0 452.0" role="img" aria-label="Colmena Nexco" style="height:auto">
             <defs><linearGradient id="nxHcCore" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6B85C"/><stop offset="1" stop-color="#CB9339"/></linearGradient></defs>
             <polygon class="nx-hc__cell" points="-86.6,-200.0 -43.3,-175.0 -43.3,-125.0 -86.6,-100.0 -129.9,-125.0 -129.9,-175.0"/>
             <polygon class="nx-hc__cell nx-hc__lit" points="0.0,-200.0 43.3,-175.0 43.3,-125.0 0.0,-100.0 -43.3,-125.0 -43.3,-175.0" style="animation-delay:0s"/>
@@ -120,17 +129,17 @@
       </div>
       <div class="s-pillars">
         <div class="s-pillar" data-reveal style="transition-delay:0ms">
-          <span class="nx-hexframe nx-hexframe--gold" style="width:60px;height:60px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:26px;height:26px"><i data-lucide="users-round"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--gold" style="width:50px;height:50px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:22px;height:22px"><i data-lucide="users-round"></i></span></span></span>
           <h3>Comunidad</h3>
           <p>Reunimos a las personas correctas alrededor de tu marca.</p>
         </div>
         <div class="s-pillar" data-reveal style="transition-delay:90ms">
-          <span class="nx-hexframe nx-hexframe--gold" style="width:60px;height:60px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:26px;height:26px"><i data-lucide="workflow"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--gold" style="width:50px;height:50px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:22px;height:22px"><i data-lucide="workflow"></i></span></span></span>
           <h3>Conexión</h3>
           <p>Creamos vínculos reales entre tu marca y tu audiencia.</p>
         </div>
         <div class="s-pillar" data-reveal style="transition-delay:180ms">
-          <span class="nx-hexframe nx-hexframe--gold" style="width:60px;height:60px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:26px;height:26px"><i data-lucide="target"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--gold" style="width:50px;height:50px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:22px;height:22px"><i data-lucide="target"></i></span></span></span>
           <h3>Propósito</h3>
           <p>Cada acción tiene una intención y un porqué claro.</p>
         </div>
@@ -142,11 +151,11 @@
       <div class="s-about__grid">
         <div class="s-idcards">
           <div class="nx-card nx-card--pad nx-card--featured s-idcard" data-reveal>
-            <h3><span class="nx-hexframe nx-hexframe--solid" style="width:44px;height:44px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:20px;height:20px"><i data-lucide="target"></i></span></span></span>Misión</h3>
+            <h3><span class="nx-hexframe nx-hexframe--solid" style="width:38px;height:38px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:17px;height:17px"><i data-lucide="target"></i></span></span></span>Misión</h3>
             <p>Impulsar el crecimiento de emprendedores y empresas latinas en EE. UU. con marketing digital que tiene propósito.</p>
           </div>
           <div class="nx-card nx-card--pad s-idcard" data-reveal style="transition-delay:90ms">
-            <h3><span class="nx-hexframe nx-hexframe--outline" style="width:44px;height:44px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:20px;height:20px"><i data-lucide="eye"></i></span></span></span>Visión</h3>
+            <h3><span class="nx-hexframe nx-hexframe--outline" style="width:38px;height:38px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:17px;height:17px"><i data-lucide="eye"></i></span></span></span>Visión</h3>
             <p>Ser la colmena de referencia para las marcas latinas que quieren conectar, crecer y trascender.</p>
           </div>
         </div>
@@ -175,23 +184,23 @@
         </div>
         <ul class="s-hexlist">
           <li data-reveal style="transition-delay:0ms">
-            <span class="nx-hexbullet nx-hexbullet--solid" style="width:40px;height:40px;font-size:16.8px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__label">1</span></span>
+            <span class="nx-hexbullet nx-hexbullet--solid" style="width:34px;height:34px;font-size:14.3px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__label">1</span></span>
             <p><b>Emprendedores latinos</b><small>Que empiezan y quieren visibilidad real.</small></p>
           </li>
           <li data-reveal style="transition-delay:70ms">
-            <span class="nx-hexbullet nx-hexbullet--soft" style="width:40px;height:40px;font-size:16.8px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">2</span></span>
+            <span class="nx-hexbullet nx-hexbullet--soft" style="width:34px;height:34px;font-size:14.3px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">2</span></span>
             <p><b>Pequeñas y medianas empresas</b><small>Listas para profesionalizar sus redes.</small></p>
           </li>
           <li data-reveal style="transition-delay:140ms">
-            <span class="nx-hexbullet nx-hexbullet--soft" style="width:40px;height:40px;font-size:16.8px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">3</span></span>
+            <span class="nx-hexbullet nx-hexbullet--soft" style="width:34px;height:34px;font-size:14.3px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">3</span></span>
             <p><b>Marcas personales</b><small>Coaches, creadores y profesionales.</small></p>
           </li>
           <li data-reveal style="transition-delay:210ms">
-            <span class="nx-hexbullet nx-hexbullet--soft" style="width:40px;height:40px;font-size:16.8px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">4</span></span>
+            <span class="nx-hexbullet nx-hexbullet--soft" style="width:34px;height:34px;font-size:14.3px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">4</span></span>
             <p><b>Negocios locales en EE. UU.</b><small>Que buscan clientes en su comunidad.</small></p>
           </li>
           <li data-reveal style="transition-delay:280ms">
-            <span class="nx-hexbullet nx-hexbullet--soft" style="width:40px;height:40px;font-size:16.8px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">5</span></span>
+            <span class="nx-hexbullet nx-hexbullet--soft" style="width:34px;height:34px;font-size:14.3px"><span class="nx-hexbullet__ring" aria-hidden="true"></span><span class="nx-hexbullet__inner" aria-hidden="true"></span><span class="nx-hexbullet__label">5</span></span>
             <p><b>Quienes sienten miedo a empezar</b><small>A ell@s los acompañamos paso a paso.</small></p>
           </li>
         </ul>
@@ -208,7 +217,7 @@
       <div class="s-services">
         <div class="nx-card nx-card--pad nx-card--interactive s-svc" data-reveal style="transition-delay:0ms">
           <div class="s-svc__top">
-            <span class="nx-hexframe nx-hexframe--gold" style="width:54px;height:54px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="pen-tool"></i></span></span></span>
+            <span class="nx-hexframe nx-hexframe--gold" style="width:46px;height:46px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="pen-tool"></i></span></span></span>
           </div>
           <h3>Construcción de marca</h3>
           <p>Identidad, mensaje y estrategia para que tu marca tenga alma y dirección.</p>
@@ -218,7 +227,7 @@
 
         <div class="nx-card nx-card--pad nx-card--interactive nx-card--featured s-svc" data-reveal style="transition-delay:80ms">
           <div class="s-svc__top">
-            <span class="nx-hexframe nx-hexframe--solid" style="width:54px;height:54px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="users"></i></span></span></span>
+            <span class="nx-hexframe nx-hexframe--solid" style="width:46px;height:46px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="users"></i></span></span></span>
             <span class="nx-badge nx-badge--gold">Destacado</span>
           </div>
           <h3>Community Manager</h3>
@@ -229,7 +238,7 @@
 
         <div class="nx-card nx-card--pad nx-card--interactive s-svc" data-reveal style="transition-delay:160ms">
           <div class="s-svc__top">
-            <span class="nx-hexframe nx-hexframe--gold" style="width:54px;height:54px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="megaphone"></i></span></span></span>
+            <span class="nx-hexframe nx-hexframe--gold" style="width:46px;height:46px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="megaphone"></i></span></span></span>
           </div>
           <h3>Campañas</h3>
           <p>Anuncios que convierten, con creatividad, segmentación y pauta.</p>
@@ -239,7 +248,7 @@
 
         <div class="nx-card nx-card--pad nx-card--interactive s-svc" data-reveal style="transition-delay:0ms">
           <div class="s-svc__top">
-            <span class="nx-hexframe nx-hexframe--gold" style="width:54px;height:54px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="monitor-smartphone"></i></span></span></span>
+            <span class="nx-hexframe nx-hexframe--gold" style="width:46px;height:46px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="monitor-smartphone"></i></span></span></span>
           </div>
           <h3>Digitalización</h3>
           <p>Llevamos tu negocio al mundo digital, de principio a fin.</p>
@@ -249,7 +258,7 @@
 
         <div class="nx-card nx-card--pad nx-card--interactive s-svc" data-reveal style="transition-delay:80ms">
           <div class="s-svc__top">
-            <span class="nx-hexframe nx-hexframe--gold" style="width:54px;height:54px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="camera"></i></span></span></span>
+            <span class="nx-hexframe nx-hexframe--gold" style="width:46px;height:46px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="camera"></i></span></span></span>
           </div>
           <h3>Fotografía</h3>
           <p>Imágenes con la estética de tu marca, listas para redes.</p>
@@ -260,7 +269,7 @@
 
       <div class="s-lead-magnet" data-reveal>
         <div class="s-lead-magnet__txt">
-          <span class="nx-hexframe nx-hexframe--gold" style="width:64px;height:64px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:28px;height:28px"><i data-lucide="book-open"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--gold" style="width:55px;height:55px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:23px;height:23px"><i data-lucide="book-open"></i></span></span></span>
           <div>
             <h3>Manual para vencer el miedo</h3>
             <p>Tu primer paso para lanzarte sin miedo. Una guía práctica, gratis.</p>
@@ -268,7 +277,7 @@
         </div>
         <div style="display:flex;align-items:center;gap:16px">
           <span class="nx-badge nx-badge--free">Gratis</span>
-          <a class="nx-btn nx-btn--primary nx-btn--md" href="#contacto">Descárgalo<span class="nx-btn__icon" aria-hidden="true"><span class="nx-ic" style="width:18px;height:18px"><i data-lucide="download"></i></span></span></a>
+          <a class="nx-btn nx-btn--primary nx-btn--md" href="#contacto">Descárgalo<span class="nx-btn__icon" aria-hidden="true"><span class="nx-ic" style="width:16px;height:16px"><i data-lucide="download"></i></span></span></a>
         </div>
       </div>
     </section>
@@ -282,22 +291,22 @@
       </div>
       <div class="s-voice">
         <div class="nx-card nx-card--pad s-voice__card" data-reveal style="transition-delay:0ms">
-          <span class="nx-hexframe nx-hexframe--soft" style="width:52px;height:52px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="handshake"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--soft" style="width:45px;height:45px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="handshake"></i></span></span></span>
           <h3>Cercana</h3>
           <p>De tú a tú, como quien acompaña a un amig@.</p>
         </div>
         <div class="nx-card nx-card--pad s-voice__card" data-reveal style="transition-delay:70ms">
-          <span class="nx-hexframe nx-hexframe--soft" style="width:52px;height:52px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="badge-check"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--soft" style="width:45px;height:45px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="badge-check"></i></span></span></span>
           <h3>Profesional</h3>
           <p>Con criterio y estrategia, sin sonar acartonad@.</p>
         </div>
         <div class="nx-card nx-card--pad s-voice__card" data-reveal style="transition-delay:140ms">
-          <span class="nx-hexframe nx-hexframe--soft" style="width:52px;height:52px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="flame"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--soft" style="width:45px;height:45px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="flame"></i></span></span></span>
           <h3>Motivadora</h3>
           <p>Te impulsamos a dar el siguiente paso, hoy.</p>
         </div>
         <div class="nx-card nx-card--pad s-voice__card" data-reveal style="transition-delay:210ms">
-          <span class="nx-hexframe nx-hexframe--soft" style="width:52px;height:52px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:24px;height:24px"><i data-lucide="sparkles"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--soft" style="width:45px;height:45px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:21px;height:21px"><i data-lucide="sparkles"></i></span></span></span>
           <h3>Auténtica</h3>
           <p>Tu esencia, real y amplificada. Sin filtros de más.</p>
         </div>
@@ -326,11 +335,11 @@
             <span class="nx-field__label">Cuéntanos de tu marca<span class="nx-field__req"> *</span></span>
             <textarea id="mensaje" class="nx-input nx-textarea" name="mensaje" rows="4" placeholder="¿Qué quieres construir con Nexco?" required></textarea>
           </label>
-          <button type="submit" class="nx-btn nx-btn--primary nx-btn--lg">Enviar mensaje<span class="nx-btn__icon" aria-hidden="true"><span class="nx-ic" style="width:18px;height:18px"><i data-lucide="send"></i></span></span></button>
+          <button type="submit" class="nx-btn nx-btn--primary nx-btn--lg">Enviar mensaje<span class="nx-btn__icon" aria-hidden="true"><span class="nx-ic" style="width:16px;height:16px"><i data-lucide="send"></i></span></span></button>
         </form>
 
         <div class="nx-card nx-card--pad nx-card--featured s-thanks" id="contactThanks" hidden>
-          <span class="nx-hexframe nx-hexframe--solid" style="width:64px;height:64px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:28px;height:28px"><i data-lucide="check"></i></span></span></span>
+          <span class="nx-hexframe nx-hexframe--solid" style="width:55px;height:55px"><span class="nx-hexframe__ring" aria-hidden="true"></span><span class="nx-hexframe__inner" aria-hidden="true"></span><span class="nx-hexframe__icon"><span class="nx-ic" style="width:23px;height:23px"><i data-lucide="check"></i></span></span></span>
           <h3>¡Gracias!</h3>
           <p style="color:var(--text-secondary)">Te escribiremos muy pronto. Bienvenid@ a la colmena.</p>
         </div>
