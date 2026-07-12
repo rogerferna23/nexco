@@ -32,19 +32,19 @@ body { background: transparent; }
   will-change: transform;
 }
 .bg-fx__blob--1 {
-  width: 60vw; height: 60vw; top: -20%; left: -12%;
-  background: radial-gradient(circle, rgba(203,147,57,0.42), transparent 62%);
-  animation: bgDrift1 26s ease-in-out infinite;
+  width: 62vw; height: 62vw; top: -20%; left: -12%;
+  background: radial-gradient(circle, rgba(203,147,57,0.52), transparent 62%);
+  animation: bgDrift1 26s ease-in-out infinite, bgPulseA 4.5s ease-in-out infinite;
 }
 .bg-fx__blob--2 {
-  width: 50vw; height: 50vw; bottom: -24%; right: -14%;
-  background: radial-gradient(circle, rgba(230,184,92,0.32), transparent 62%);
-  animation: bgDrift2 33s ease-in-out infinite;
+  width: 52vw; height: 52vw; bottom: -24%; right: -14%;
+  background: radial-gradient(circle, rgba(230,184,92,0.42), transparent 62%);
+  animation: bgDrift2 33s ease-in-out infinite, bgPulseB 6s ease-in-out infinite;
 }
 .bg-fx__blob--3 {
-  width: 44vw; height: 44vw; top: 34%; left: 40%;
-  background: radial-gradient(circle, rgba(169,118,42,0.34), transparent 64%);
-  animation: bgDrift3 40s ease-in-out infinite;
+  width: 46vw; height: 46vw; top: 34%; left: 40%;
+  background: radial-gradient(circle, rgba(169,118,42,0.44), transparent 64%);
+  animation: bgDrift3 40s ease-in-out infinite, bgPulseC 5.2s ease-in-out infinite;
 }
 .bg-fx__grid {
   position: absolute;
@@ -52,7 +52,7 @@ body { background: transparent; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='48' viewBox='0 0 56 48'%3E%3Cpath d='M14 1 L42 1 L56 24 L42 47 L14 47 L0 24 Z' fill='none' stroke='%23CB9339' stroke-width='1.2'/%3E%3C/svg%3E");
   background-size: 56px 48px;
   opacity: 0.05;
-  animation: bgPan 34s linear infinite;
+  animation: bgPan 34s linear infinite, bgGridPulse 4s ease-in-out infinite;
 }
 .bg-fx__veil {
   position: absolute;
@@ -63,6 +63,11 @@ body { background: transparent; }
 @keyframes bgDrift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-11%,-9%) scale(1.12); } }
 @keyframes bgDrift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(9%,-8%) scale(1.2); } }
 @keyframes bgPan { from { transform: translate(0,0); } to { transform: translate(56px,48px); } }
+/* Latido / parpadeo del fondo */
+@keyframes bgPulseA { 0%,100% { opacity: .38; } 50% { opacity: 1; } }
+@keyframes bgPulseB { 0%,100% { opacity: .5; } 45% { opacity: .95; } }
+@keyframes bgPulseC { 0%,100% { opacity: .32; } 55% { opacity: .9; } }
+@keyframes bgGridPulse { 0%,100% { opacity: .03; } 50% { opacity: .095; } }
 @media (prefers-reduced-motion: reduce) {
   .bg-fx__blob, .bg-fx__grid { animation: none; }
 }
@@ -145,7 +150,52 @@ body { background: transparent; }
 
 /* ---- Services ---- */
 .s-services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.s-svc { display: flex; flex-direction: column; gap: 12px; height: 100%; }
+.s-svc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(135% 95% at 100% 0%, rgba(203,147,57,.10), transparent 52%),
+    var(--surface-2);
+  box-shadow: var(--shadow-md), var(--glow-inset);
+  transition: transform var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out);
+}
+/* Spotlight dorado que sigue al cursor */
+.s-svc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(230,184,92,.20), transparent 60%);
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-out);
+  pointer-events: none;
+  z-index: 0;
+}
+.s-svc:hover::before { opacity: 1; }
+.s-svc > * { position: relative; z-index: 1; }
+/* Hover: eleva más, borde e ícono reaccionan */
+.s-svc.nx-card--interactive:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg), var(--glow-gold-md);
+}
+.s-svc .nx-hexframe { transition: transform var(--dur-med) var(--ease-spring), filter var(--dur-med) var(--ease-out); }
+.s-svc:hover .nx-hexframe { transform: translateY(-3px) scale(1.1); }
+.s-svc:hover .nx-hexframe__ring { filter: drop-shadow(0 0 9px rgba(203,147,57,.55)); }
+.s-svc:hover .s-price { color: var(--accent-hover); }
+.s-svc:hover .nx-btn--secondary { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-hover); }
+/* Tarjeta destacada: latido dorado permanente */
+.s-svc.nx-card--featured { animation: svcPulse 3s var(--ease-in-out) infinite; }
+.s-svc.nx-card--featured:hover { animation: none; transform: translateY(-8px); box-shadow: var(--shadow-lg), var(--glow-gold-lg); }
+@keyframes svcPulse {
+  0%,100% { box-shadow: var(--shadow-md), 0 0 0 1px var(--border-gold), 0 0 20px rgba(203,147,57,.14); }
+  50%     { box-shadow: var(--shadow-md), 0 0 0 1px var(--accent),      0 0 44px rgba(203,147,57,.38); }
+}
+@media (prefers-reduced-motion: reduce) { .s-svc.nx-card--featured { animation: none; } }
 .s-svc__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .s-svc h3 { font-size: var(--text-h4); font-weight: 600; }
 .s-svc p { color: var(--text-secondary); font-size: var(--text-sm); line-height: var(--leading-normal); flex: 1; }
