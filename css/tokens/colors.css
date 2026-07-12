@@ -1,0 +1,63 @@
+/* ============================================================
+   NEXCO — Color tokens
+   Concept: "la colmena" on deep black. Black dominates (~70%),
+   smoke-white carries text, Nexco gold is the precise accent —
+   never saturated, never flooded. No purples, no rainbow.
+   ============================================================ */
+:root {
+  /* --- Base palette (raw, from Manual de Marca v1.0) --- */
+  --color-black:        #0D0D0D;  /* primary background, dominant */
+  --color-black-pure:   #080808;  /* deepest wells / footer */
+  --color-ink-1:        #111111;  /* layered black */
+  --color-ink-2:        #161616;  /* layered black, cards */
+  --color-ink-3:        #1C1C1C;  /* elevated surface / hover */
+  --color-ink-4:        #242424;  /* inputs, strong dividers */
+
+  --color-smoke:        #F2F2F2;  /* smoke white — primary text */
+  --color-white:        #FFFFFF;
+
+  --color-gold:         #CB9339;  /* Nexco gold — the accent */
+  --color-gold-light:   #E6B85C;  /* light gold — gradient top */
+  --color-gold-deep:    #A9762A;  /* pressed / deeper gold */
+  --color-gold-dark:    #7A551E;  /* gold on gold shadows */
+
+  /* --- Semantic: surfaces --- */
+  --bg-base:            var(--color-black);
+  --bg-deep:            var(--color-black-pure);
+  --surface-1:          var(--color-ink-1);
+  --surface-2:          var(--color-ink-2);
+  --surface-3:          var(--color-ink-3);
+  --surface-input:      var(--color-ink-4);
+  --surface-glass:      rgba(18, 18, 18, 0.72);   /* nav on scroll (with blur) */
+
+  /* --- Semantic: text --- */
+  --text-primary:       var(--color-smoke);
+  --text-secondary:     rgba(242, 242, 242, 0.68);
+  --text-muted:         rgba(242, 242, 242, 0.46);
+  --text-on-gold:       #0D0D0D;                    /* ink on gold fills */
+  --text-accent:        var(--color-gold);
+
+  /* --- Semantic: accent --- */
+  --accent:             var(--color-gold);
+  --accent-hover:       var(--color-gold-light);
+  --accent-press:       var(--color-gold-deep);
+  --accent-soft:        rgba(203, 147, 57, 0.12);   /* tinted fills */
+  --accent-softer:      rgba(203, 147, 57, 0.06);
+
+  /* --- Semantic: borders & lines --- */
+  --border-subtle:      rgba(242, 242, 242, 0.09);  /* hairline */
+  --border-strong:      rgba(242, 242, 242, 0.16);
+  --border-gold:        rgba(203, 147, 57, 0.38);
+  --border-gold-soft:   rgba(203, 147, 57, 0.18);
+
+  /* --- Gradients (gold only — no generic multicolor) --- */
+  --gradient-gold:        linear-gradient(135deg, #E6B85C 0%, #CB9339 55%, #A9762A 100%); /* @kind color */
+  --gradient-gold-soft:   linear-gradient(180deg, rgba(230,184,92,0.16) 0%, rgba(203,147,57,0) 70%); /* @kind color */
+  --gradient-radial-gold: radial-gradient(60% 60% at 50% 0%, rgba(203,147,57,0.16) 0%, rgba(203,147,57,0) 70%); /* @kind color */
+  --gradient-ink:         linear-gradient(180deg, #161616 0%, #0D0D0D 100%); /* @kind color */
+
+  /* --- Feedback (used sparingly; tuned to the dark palette) --- */
+  --color-success:      #6FB98A;
+  --color-error:        #E06C5A;
+  --color-warning:      var(--color-gold-light);
+}

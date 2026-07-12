@@ -1,0 +1,19 @@
+/* ============================================================
+   NEXCO — Radius tokens
+   Rectangular surfaces stay subtly rounded (editorial calm);
+   chips/pills go full-round; the hexagon clip is the brand motif.
+   ============================================================ */
+:root {
+  --radius-xs:   6px;
+  --radius-sm:   10px;
+  --radius-md:   16px;   /* default card */
+  --radius-lg:   24px;
+  --radius-xl:   32px;
+  --radius-pill: 999px;
+
+  /* --- Hexagon motif (the structural heart of the brand) --- */
+  /* Pointy-top hex — used for icon frames, bullets, avatars. */
+  --hex-clip:      polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* @kind other */
+  /* Flat-top hex — used for wide hexagonal cards. */
+  --hex-clip-flat: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* @kind other */
+}

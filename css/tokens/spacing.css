@@ -1,0 +1,32 @@
+/* ============================================================
+   NEXCO — Spacing & layout tokens
+   Spacious brand: "mucho aire negro" (lots of black air).
+   4px base grid, generous section rhythm.
+   ============================================================ */
+:root {
+  /* --- Space scale --- */
+  --space-0:  0;
+  --space-1:  0.25rem;   /* 4  */
+  --space-2:  0.5rem;    /* 8  */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.5rem;    /* 24 */
+  --space-6:  2rem;      /* 32 */
+  --space-7:  3rem;      /* 48 */
+  --space-8:  4rem;      /* 64 */
+  --space-9:  6rem;      /* 96 */
+  --space-10: 8rem;      /* 128 */
+
+  /* --- Layout --- */
+  --container-max: 1200px;   /* content column */
+  --container-wide: 1360px;  /* full-bleed sections */
+  --gutter: clamp(1.25rem, 5vw, 4rem);          /* @kind spacing */
+  --section-y: clamp(5rem, 9vw, 10rem);         /* @kind spacing */
+  --stack: 1.5rem;                              /* default vertical gap */
+
+  /* --- Named breakpoints (reference; use in @media) --- */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}

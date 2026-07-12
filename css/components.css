@@ -1,0 +1,132 @@
+/* ============================================================
+   NEXCO — Component styles
+   The nx-* classes emitted by the React components live here (not in
+   JS), so anything that links styles.css is styled — with or without
+   the compiled bundle. The React layer only applies class names and
+   dynamic sizes. Consumers MUST link styles.css.
+   ============================================================ */
+
+/* ---------------- Button ---------------- */
+.nx-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--font-display);font-weight:var(--weight-semibold);letter-spacing:-.01em;text-decoration:none;border:1px solid transparent;border-radius:var(--radius-pill);cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent;transition:transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-med) var(--ease-out),background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out)}
+.nx-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.nx-btn:active{transform:scale(.97)}
+.nx-btn[disabled],.nx-btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.nx-btn--sm{font-size:var(--text-sm);padding:.5rem 1.05rem}
+.nx-btn--md{font-size:var(--text-body);padding:.72rem 1.55rem}
+.nx-btn--lg{font-size:var(--text-lg);padding:.95rem 2.1rem}
+.nx-btn--full{width:100%}
+.nx-btn__icon{display:inline-grid;place-items:center;line-height:0}
+.nx-btn--primary{background:var(--gradient-gold);color:var(--text-on-gold);box-shadow:var(--glow-gold-sm)}
+.nx-btn--primary:hover{box-shadow:var(--glow-gold-md);transform:translateY(-2px)}
+.nx-btn--primary:active{transform:scale(.97)}
+.nx-btn--secondary{background:transparent;color:var(--accent);border-color:var(--border-gold)}
+.nx-btn--secondary:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-hover)}
+.nx-btn--ghost{background:transparent;color:var(--text-primary)}
+.nx-btn--ghost:hover{color:var(--accent);background:var(--accent-softer)}
+
+/* ---------------- IconButton ---------------- */
+.nx-iconbtn{display:inline-grid;place-items:center;border:1px solid transparent;background:transparent;color:var(--text-primary);cursor:pointer;line-height:0;-webkit-tap-highlight-color:transparent;transition:transform var(--dur-fast) var(--ease-out),background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out),box-shadow var(--dur-med) var(--ease-out)}
+.nx-iconbtn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.nx-iconbtn:active{transform:scale(.94)}
+.nx-iconbtn[disabled]{opacity:.45;pointer-events:none}
+.nx-iconbtn--circle{border-radius:var(--radius-pill)}
+.nx-iconbtn--square{border-radius:var(--radius-sm)}
+.nx-iconbtn--hex{clip-path:var(--hex-clip)}
+.nx-iconbtn--ghost:hover{background:var(--accent-softer);color:var(--accent)}
+.nx-iconbtn--outline{border-color:var(--border-strong)}
+.nx-iconbtn--outline:hover{border-color:var(--accent);color:var(--accent)}
+.nx-iconbtn--solid{background:var(--gradient-gold);color:var(--text-on-gold)}
+.nx-iconbtn--solid:hover{box-shadow:var(--glow-gold-sm)}
+
+/* ---------------- Card ---------------- */
+.nx-card{position:relative;background:var(--surface-2);border:1px solid var(--border-subtle);border-radius:var(--radius-md);box-shadow:var(--shadow-md);transition:transform var(--dur-med) var(--ease-out),box-shadow var(--dur-med) var(--ease-out),border-color var(--dur-med) var(--ease-out)}
+.nx-card--pad{padding:var(--space-6)}
+.nx-card--interactive{cursor:pointer}
+.nx-card--interactive:hover{transform:translateY(-4px);border-color:var(--border-gold);box-shadow:var(--shadow-lg),var(--glow-gold-sm)}
+.nx-card--featured{border-color:var(--border-gold);box-shadow:var(--shadow-md),var(--glow-gold-sm)}
+.nx-card--ghost{background:transparent;box-shadow:none;border-color:var(--border-subtle)}
+
+/* ---------------- Chip ---------------- */
+.nx-chip{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-weight:var(--weight-medium);font-size:var(--text-sm);line-height:1;padding:.5em 1em;border-radius:var(--radius-pill);border:1px solid transparent;white-space:nowrap}
+.nx-chip--outline{color:var(--accent);border-color:var(--border-gold)}
+.nx-chip--soft{color:var(--accent);background:var(--accent-soft)}
+.nx-chip--solid{color:var(--text-on-gold);background:var(--gradient-gold)}
+.nx-chip--neutral{color:var(--text-secondary);border-color:var(--border-strong)}
+.nx-chip__dot{width:.5em;height:.5em;background:currentColor;clip-path:var(--hex-clip);flex:none}
+
+/* ---------------- Badge ---------------- */
+.nx-badge{display:inline-flex;align-items:center;gap:.4em;font-family:var(--font-body);font-weight:var(--weight-semibold);font-size:var(--text-xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;line-height:1;padding:.42em .72em;border-radius:var(--radius-xs);border:1px solid transparent}
+.nx-badge--gold{background:var(--gradient-gold);color:var(--text-on-gold)}
+.nx-badge--outline{color:var(--accent);border-color:var(--border-gold)}
+.nx-badge--muted{color:var(--text-secondary);background:var(--surface-3)}
+.nx-badge--free{background:var(--accent-soft);color:var(--accent)}
+
+/* ---------------- Fields (Input, Textarea) ---------------- */
+.nx-field{display:flex;flex-direction:column;gap:.5rem}
+.nx-field__label{font-family:var(--font-body);font-weight:var(--weight-medium);font-size:var(--text-sm);color:var(--text-secondary)}
+.nx-field__req{color:var(--accent)}
+.nx-input{width:100%;font-family:var(--font-body);font-size:var(--text-body);color:var(--text-primary);background:var(--surface-input);border:1px solid var(--border-strong);border-radius:var(--radius-sm);padding:.8rem 1rem;transition:border-color var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}
+.nx-input::placeholder{color:var(--text-muted)}
+.nx-input:hover{border-color:var(--accent-press)}
+.nx-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.nx-input[aria-invalid="true"]{border-color:var(--color-error);box-shadow:0 0 0 3px rgba(224,108,90,.16)}
+.nx-textarea{min-height:120px;resize:vertical;line-height:1.6}
+.nx-field__hint{font-size:var(--text-xs);color:var(--text-muted)}
+.nx-field__hint--error{color:var(--color-error)}
+
+/* ---------------- Wordmark (PLACEHOLDER logo) ---------------- */
+.nx-wordmark{display:inline-flex;align-items:center;gap:.55em;text-decoration:none;line-height:1;color:var(--text-primary)}
+.nx-wordmark__text{font-family:var(--font-display);font-weight:var(--weight-bold);letter-spacing:.02em;font-size:1em}
+.nx-wordmark--gold .nx-wordmark__text{color:var(--accent)}
+a.nx-wordmark{transition:opacity var(--dur-fast) var(--ease-out)}
+a.nx-wordmark:hover{opacity:.82;color:var(--text-primary)}
+
+/* ---------------- Eyebrow ---------------- */
+.nx-eyebrow{display:inline-flex;align-items:center;gap:.6em;font-family:var(--font-body);font-weight:var(--weight-semibold);font-size:var(--text-eyebrow);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--accent);margin:0}
+.nx-eyebrow__tick{width:.5em;height:.5em;background:var(--accent);clip-path:var(--hex-clip);flex:none}
+
+/* ---------------- HexFrame ---------------- */
+.nx-hexframe{position:relative;display:inline-grid;place-items:center;flex:none;transition:transform var(--dur-med) var(--ease-out)}
+.nx-hexframe__ring,.nx-hexframe__inner{position:absolute;clip-path:var(--hex-clip)}
+.nx-hexframe__ring{inset:0}
+.nx-hexframe__icon{position:relative;z-index:1;display:grid;place-items:center;color:var(--accent);line-height:0}
+.nx-hexframe--gold .nx-hexframe__ring{background:var(--gradient-gold)}
+.nx-hexframe--gold .nx-hexframe__inner{inset:2px;background:var(--surface-2)}
+.nx-hexframe--outline .nx-hexframe__ring{background:var(--border-gold)}
+.nx-hexframe--outline .nx-hexframe__inner{inset:1.5px;background:var(--bg-base)}
+.nx-hexframe--soft .nx-hexframe__ring{background:transparent}
+.nx-hexframe--soft .nx-hexframe__inner{inset:0;background:var(--accent-soft)}
+.nx-hexframe--solid .nx-hexframe__ring{background:transparent}
+.nx-hexframe--solid .nx-hexframe__inner{inset:0;background:var(--gradient-gold)}
+.nx-hexframe--solid .nx-hexframe__icon{color:var(--text-on-gold)}
+
+/* ---------------- HexBullet ---------------- */
+.nx-hexbullet{position:relative;display:inline-grid;place-items:center;flex:none;font-family:var(--font-display);font-weight:var(--weight-bold);line-height:1}
+.nx-hexbullet__ring,.nx-hexbullet__inner{position:absolute;clip-path:var(--hex-clip)}
+.nx-hexbullet__ring{inset:0}
+.nx-hexbullet__label{position:relative;z-index:1}
+.nx-hexbullet--solid .nx-hexbullet__ring{background:var(--gradient-gold)}
+.nx-hexbullet--solid .nx-hexbullet__label{color:var(--text-on-gold)}
+.nx-hexbullet--soft .nx-hexbullet__ring{background:var(--border-gold)}
+.nx-hexbullet--soft .nx-hexbullet__inner{inset:1.5px;background:var(--surface-2)}
+.nx-hexbullet--soft .nx-hexbullet__label{color:var(--accent)}
+.nx-hexbullet--outline .nx-hexbullet__ring{background:var(--border-gold)}
+.nx-hexbullet--outline .nx-hexbullet__inner{inset:1.5px;background:var(--bg-base)}
+.nx-hexbullet--outline .nx-hexbullet__label{color:var(--accent)}
+
+/* ---------------- Marquee ---------------- */
+.nx-marquee{--nx-gap:2.75rem;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.nx-marquee__track{display:flex;align-items:center;gap:var(--nx-gap);width:max-content;animation:nxMarquee var(--nx-mq-dur,26s) linear infinite}
+.nx-marquee--reverse .nx-marquee__track{animation-direction:reverse}
+.nx-marquee[data-pause="1"]:hover .nx-marquee__track{animation-play-state:paused}
+.nx-marquee__item{display:inline-flex;align-items:center;gap:var(--nx-gap);white-space:nowrap;font-family:var(--font-display);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-tight);color:var(--text-primary);font-size:var(--text-h4)}
+.nx-marquee__sep{width:.5em;height:.5em;background:var(--accent);clip-path:var(--hex-clip);flex:none}
+@keyframes nxMarquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - var(--nx-gap)/2))}}
+@media (prefers-reduced-motion: reduce){.nx-marquee__track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+
+/* ---------------- Honeycomb ---------------- */
+@keyframes nxHcPulse{0%,100%{opacity:.22}50%{opacity:.95}}
+.nx-hc__cell{fill:transparent;stroke:var(--border-gold-soft);stroke-width:2;transition:stroke var(--dur-med) var(--ease-out)}
+.nx-hc__lit{fill:var(--accent);stroke:var(--border-gold);animation:nxHcPulse var(--nx-hc-dur,3.6s) var(--ease-in-out) infinite}
+.nx-hc__core{stroke:var(--color-gold-light);stroke-width:2.5;filter:drop-shadow(0 0 16px rgba(203,147,57,.55))}
+@media (prefers-reduced-motion: reduce){.nx-hc__lit{animation:none;opacity:.6}}
